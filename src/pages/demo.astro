@@ -1,0 +1,505 @@
+---
+import "./styles/global.css";
+import Header from "./components/Header.astro";
+import Footer from "./components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <title>IOVI CMMS</title>
+    <meta
+      name="description"
+      content="Solicita una demostración personalizada de IOVI CMMS."
+    />
+
+    <title>Solicitar demostración | IOVI</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main class="demo-page">
+      <section class="demo-section">
+        <div class="container demo-grid">
+          <div class="demo-copy">
+            <span class="demo-badge">Demostración personalizada</span>
+
+            <h1>Conoce cómo IOVI puede adaptarse a tu operación</h1>
+
+            <p>
+              Cuéntanos un poco sobre tu institución y las necesidades de tu
+              equipo. Nos pondremos en contacto contigo para coordinar una
+              demostración de la plataforma.
+            </p>
+
+          </div>
+
+          <form class="demo-form">
+            <div class="form-row">
+              <label>
+                Nombre completo
+                <input
+                  type="text"
+                  name="nombre"
+                  placeholder="Tu nombre"
+                  required
+                />
+              </label>
+
+              <label>
+                Institución o empresa
+                <input
+                  type="text"
+                  name="empresa"
+                  placeholder="Nombre de la institución"
+                  required
+                />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Cargo
+                <input
+                  type="text"
+                  name="cargo"
+                  placeholder="Ej. Ingeniera biomédica"
+                />
+              </label>
+
+              <label>
+                Ciudad
+                <input
+                  type="text"
+                  name="ciudad"
+                  placeholder="Ciudad y estado"
+                />
+              </label>
+            </div>
+
+            <div class="form-row">
+              <label>
+                Correo electrónico
+                <input
+                  type="email"
+                  name="correo"
+                  placeholder="nombre@empresa.com"
+                  required
+                />
+              </label>
+
+              <label>
+                Teléfono
+                <input
+                  type="tel"
+                  name="telefono"
+                  placeholder="+52 000 000 0000"
+                />
+              </label>
+            </div>
+
+            <label>
+              Número aproximado de equipos
+              <select name="equipos">
+                <option value="">Selecciona una opción</option>
+                <option value="1-50">1 a 50</option>
+                <option value="51-200">51 a 200</option>
+                <option value="201-500">201 a 500</option>
+                <option value="500+">Más de 500</option>
+              </select>
+            </label>
+
+            <label>
+              ¿Qué buscas mejorar?
+              <textarea
+                name="mensaje"
+                rows="5"
+                placeholder="Cuéntanos brevemente sobre tus necesidades"
+              ></textarea>
+            </label>
+
+<div class="form-consent">
+  <label class="checkbox-row">
+    <input
+      type="checkbox"
+      id="demo-privacy"
+      name="privacyAccepted"
+      required
+    />
+
+    <span>
+      He leído y acepto el
+      <a
+        href="/aviso-de-privacidad"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Aviso de Privacidad
+      </a>.
+      <strong aria-hidden="true">*</strong>
+    </span>
+  </label>
+
+  <p class="privacy-description">
+    Al enviar este formulario autorizo el tratamiento de mis datos personales
+    conforme al Aviso de Privacidad.
+  </p>
+
+  <label class="checkbox-row optional-checkbox">
+    <input
+      type="checkbox"
+      id="demo-news"
+      name="marketingAccepted"
+    />
+
+    <span>
+      Deseo recibir novedades, actualizaciones y noticias sobre IOVI CMMS.
+    </span>
+  </label>
+</div>
+
+<button
+  type="submit"
+  id="demo-submit"
+  disabled
+>
+  Solicitar demo
+</button>
+
+            <p class="form-note">
+              Este formulario es una vista preliminar. El envío se conectará
+              próximamente.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <Footer />
+    <script>
+  const privacyCheckbox = document.querySelector("#demo-privacy");
+  const submitButton = document.querySelector("#demo-submit");
+
+  if (
+    privacyCheckbox instanceof HTMLInputElement &&
+    submitButton instanceof HTMLButtonElement
+  ) {
+    const updateSubmitButton = () => {
+      submitButton.disabled = !privacyCheckbox.checked;
+    };
+
+    privacyCheckbox.addEventListener("change", updateSubmitButton);
+    updateSubmitButton();
+  }
+</script>
+  </body>
+</html>
+
+<style>
+  .demo-page {
+    min-height: calc(100vh - 70px);
+    background:
+      radial-gradient(circle at 10% 10%, rgb(37 99 235 / 12%), transparent 30%),
+      radial-gradient(circle at 90% 20%, rgb(6 182 212 / 10%), transparent 28%),
+      #f8fafc;
+  }
+
+  .demo-section {
+    padding: 80px 0;
+  }
+
+  .demo-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 64px;
+  }
+
+  .demo-copy {
+    position: sticky;
+    top: 120px;
+  }
+
+  .demo-badge {
+    display: inline-flex;
+    padding: 8px 12px;
+    border: 1px solid rgb(37 99 235 / 15%);
+    border-radius: 999px;
+    color: var(--primary);
+    background: rgb(37 99 235 / 7%);
+    font-size: 0.78rem;
+    font-weight: 800;
+  }
+
+  .demo-copy h1 {
+    margin: 24px 0 18px;
+    font-size: clamp(2.5rem, 5vw, 4.4rem);
+    line-height: 1;
+    letter-spacing: -0.05em;
+  }
+
+  .demo-copy > p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .demo-benefits {
+    display: grid;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .demo-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .demo-benefits span {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: white;
+    background: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 900;
+  }
+
+  .demo-benefits p {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.9rem;
+  }
+
+  .demo-form {
+    display: grid;
+    gap: 20px;
+    padding: 34px;
+    border: 1px solid rgb(148 163 184 / 18%);
+    border-radius: 24px;
+    background: rgb(255 255 255 / 92%);
+    box-shadow: 0 24px 60px rgb(15 23 42 / 10%);
+    backdrop-filter: blur(14px);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .demo-form label {
+    display: grid;
+    gap: 8px;
+    color: var(--navy);
+    font-size: 0.84rem;
+    font-weight: 700;
+  }
+
+  .demo-form input,
+  .demo-form select,
+  .demo-form textarea {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: white;
+    color: var(--text);
+    font: inherit;
+    font-size: 0.9rem;
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .demo-form input,
+  .demo-form select {
+    min-height: 48px;
+    padding: 0 14px;
+  }
+
+  .demo-form textarea {
+    resize: vertical;
+    min-height: 130px;
+    padding: 14px;
+  }
+
+  .demo-form input:focus,
+  .demo-form select:focus,
+  .demo-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgb(37 99 235 / 10%);
+  }
+
+  .privacy-check {
+    display: flex !important;
+    grid-template-columns: none;
+    align-items: flex-start;
+    gap: 10px !important;
+    color: var(--muted) !important;
+    font-weight: 500 !important;
+    line-height: 1.5;
+  }
+
+  .privacy-check input {
+    width: 17px;
+    min-height: auto;
+    height: 17px;
+    margin-top: 2px;
+  }
+
+  .privacy-check a {
+    color: var(--primary);
+    font-weight: 700;
+  }
+
+  .submit-button {
+    min-height: 50px;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    background: var(--primary);
+    font: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 14px 30px rgb(37 99 235 / 22%);
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .submit-button:hover {
+    transform: translateY(-2px);
+    background: #1d4ed8;
+    box-shadow: 0 18px 38px rgb(37 99 235 / 30%);
+  }
+
+  .form-note {
+    margin: -4px 0 0;
+    color: var(--muted);
+    text-align: center;
+    font-size: 0.74rem;
+  }
+
+  @media (max-width: 900px) {
+    .demo-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .demo-copy {
+      position: static;
+      text-align: center;
+    }
+
+    .demo-copy > p {
+      max-width: 650px;
+      margin-inline: auto;
+    }
+
+    .demo-benefits {
+      max-width: 470px;
+      margin-inline: auto;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .demo-section {
+      padding: 54px 0;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .demo-form {
+      padding: 24px;
+    }
+  }
+  .form-consent {
+  display: grid;
+  gap: 10px;
+  margin: 8px 0 22px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  cursor: pointer;
+  color: var(--muted);
+  font-size: 0.86rem;
+  line-height: 1.55;
+}
+
+.checkbox-row input {
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  margin-top: 2px;
+  accent-color: var(--primary);
+  cursor: pointer;
+}
+
+.checkbox-row span {
+  display: block;
+}
+
+.checkbox-row a {
+  color: var(--primary);
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.checkbox-row a:hover {
+  text-decoration: underline;
+}
+
+.checkbox-row strong {
+  color: #dc2626;
+}
+
+.privacy-description {
+  margin: -3px 0 3px 28px;
+  color: var(--muted);
+  font-size: 0.74rem;
+  line-height: 1.5;
+}
+
+.optional-checkbox {
+  margin-top: 3px;
+}
+
+button[type="submit"]:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+  box-shadow: none;
+}
+
+button[type="submit"]:disabled:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 600px) {
+  .checkbox-row {
+    font-size: 0.82rem;
+  }
+
+  .privacy-description {
+    margin-left: 28px;
+    font-size: 0.71rem;
+  }
+}
+</style>

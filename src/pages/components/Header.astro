@@ -1,0 +1,194 @@
+<header class="site-header">
+  <div class="container header-inner">
+  <a class="brand" href="/" aria-label="Inicio de IOVI">
+  <img
+    class="brand-logo"
+    src="/logo.svg"
+    alt="IOVI"
+  />
+  <span class="brand-name">IOVI</span>
+</a>
+
+<nav class="desktop-nav" aria-label="Navegación principal">
+  <a href="#funcionalidades">Funcionalidades</a>
+  <a href="#beneficios">Beneficios</a>
+  <a href="#sectores">Sectores</a>
+
+  <div class="dropdown">
+    <button class="dropbtn" type="button">
+      IOVI
+      <span aria-hidden="true">▾</span>
+    </button>
+
+    <div class="dropdown-content">
+      <a href="/nosotros">Nosotros</a>
+      <a href="/contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<a class="contact-button" href="/demo">
+  Solicitar Demo
+</a>
+
+  </div>
+</header>
+
+<style>
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    background: rgb(255 255 255 / 92%);
+    backdrop-filter: blur(14px);
+  }
+
+  .header-inner {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: max-content;
+  }
+
+  .brand-logo {
+    display: block;
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+  }
+
+  .brand-name {
+    color: var(--primary);
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    margin-left: auto;
+  }
+
+  .desktop-nav a {
+    color: var(--text);
+    font-size: 0.85rem;
+    transition: color 0.2s ease;
+  }
+
+  .desktop-nav a:hover {
+    color: var(--primary);
+  }
+
+  .contact-button {
+    min-height: 38px;
+    padding: 0 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: white;
+    background: var(--primary);
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: 0 8px 20px rgb(37 99 235 / 18%);
+    transition:
+      background 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .contact-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+  }
+  .dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  border: 0;
+  color: var(--text);
+  background: transparent;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.dropbtn:hover {
+  color: var(--primary);
+}
+
+.dropdown-content {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  z-index: 200;
+  min-width: 180px;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 18px 45px rgb(15 23 42 / 14%);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition:
+    opacity 0.2s ease,
+    visibility 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 11px 12px;
+  border-radius: 8px;
+  color: var(--text);
+  font-size: 0.84rem;
+}
+
+.dropdown-content a:hover {
+  color: var(--primary);
+  background: var(--background-blue);
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+  @media (max-width: 760px) {
+    .desktop-nav {
+      display: none;
+    }
+
+    .brand-product {
+      display: none;
+    }
+
+    .header-inner {
+      min-height: 64px;
+    }
+
+    .contact-button {
+      min-height: 36px;
+      padding-inline: 16px;
+    }
+  }
+</style>

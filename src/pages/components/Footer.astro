@@ -1,0 +1,206 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="/" class="footer-logo">
+        <img src="/logo.svg" alt="IOVI" class="footer-logo-image" />
+        <span>IOVI CMMS</span>
+      </a>
+
+      <p>
+        Plataforma para la gestión inteligente del inventario,
+        mantenimiento e historial de equipos biomédicos.
+      </p>
+
+      <div class="footer-location">
+        Hermosillo, Sonora, México
+      </div>
+    </div>
+
+    <div class="footer-column">
+      <h2>Producto</h2>
+
+      <a href="/#funcionalidades">Funcionalidades</a>
+      <a href="/#beneficios">Beneficios</a>
+      <a href="/#sectores">Sectores</a>
+      <a href="/demo">Solicitar demostración</a>
+    </div>
+
+    <div class="footer-column">
+      <h2>IOVI</h2>
+
+      <a href="/nosotros">Nosotros</a>
+      <a href="/contacto">Contacto</a>
+      <a href="/soporte">Soporte</a>
+    </div>
+
+<div class="footer-column">
+  <h2>Legal</h2>
+
+  <a href="/aviso-de-privacidad">
+    Aviso de Privacidad
+  </a>
+
+  <a href="/terminos-y-condiciones">
+    Términos y Condiciones
+  </a>
+
+  <a href="/soporte">
+    Política de Soporte
+  </a>
+</div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 IOVI. Todos los derechos reservados.</p>
+
+    <a href="mailto:contacto@iovi.mx">
+      contacto@iovi.mx
+    </a>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    position: relative;
+    overflow: hidden;
+    color: #cbd5e1;
+    background:
+      radial-gradient(
+        circle at 10% 10%,
+        rgb(37 99 235 / 20%),
+        transparent 30%
+      ),
+      #0f172a;
+  }
+
+  .site-footer::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.2;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 4%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 4%) 1px, transparent 1px);
+    background-size: 52px 52px;
+  }
+
+  .footer-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: 1.6fr repeat(3, 1fr);
+    gap: 50px;
+    padding-top: 72px;
+    padding-bottom: 58px;
+  }
+
+  .footer-brand {
+    max-width: 360px;
+  }
+
+  .footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 800;
+  }
+
+.footer-logo-image {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+  display: block;
+  flex-shrink: 0;
+}
+
+  .footer-brand p {
+    margin: 22px 0 18px;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.75;
+  }
+
+  .footer-location {
+    color: #64748b;
+    font-size: 0.8rem;
+  }
+
+  .footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+  }
+
+  .footer-column h2 {
+    margin: 0 0 8px;
+    color: white;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .footer-column a {
+    color: #94a3b8;
+    font-size: 0.86rem;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
+  }
+
+  .footer-column a:hover {
+    color: white;
+    transform: translateX(3px);
+  }
+
+  .footer-bottom {
+    position: relative;
+    z-index: 1;
+    min-height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    border-top: 1px solid rgb(255 255 255 / 8%);
+  }
+
+  .footer-bottom p {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.78rem;
+  }
+
+  .footer-bottom a {
+    color: #94a3b8;
+    font-size: 0.78rem;
+    transition: color 0.2s ease;
+  }
+
+  .footer-bottom a:hover {
+    color: white;
+  }
+
+  @media (max-width: 900px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 34px;
+      padding-top: 56px;
+    }
+
+    .footer-bottom {
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: center;
+      padding: 22px 0;
+    }
+  }
+</style>

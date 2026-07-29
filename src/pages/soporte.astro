@@ -1,0 +1,1231 @@
+---
+import "./styles/global.css";
+import Header from "./components/Header.astro";
+import Footer from "./components/Footer.astro";
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <meta
+      name="description"
+      content="Centro de soporte de IOVI CMMS. Encuentra respuestas y ayuda para utilizar la plataforma."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+
+    <title>Soporte | IOVI CMMS</title>
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <!-- ENCABEZADO -->
+      <section class="support-hero">
+        <div class="container support-hero-content">
+          <span class="support-eyebrow">Centro de ayuda</span>
+
+          <h1>Centro de soporte IOVI</h1>
+
+          <p>
+            Encuentra respuestas rápidas, consulta nuestras preguntas
+            frecuentes o comunícate con nuestro equipo.
+          </p>
+
+          <div class="support-search">
+            <span aria-hidden="true">⌕</span>
+
+            <input
+              id="support-search"
+              type="search"
+              placeholder="¿En qué podemos ayudarte?"
+              aria-label="Buscar ayuda"
+            />
+          </div>
+        </div>
+      </section>
+
+ <!-- CATEGORÍAS -->
+<section class="support-categories" id="categorias">
+  <div class="container">
+    <div class="support-heading">
+      <span class="section-label">Explora la plataforma</span>
+      <h2>Categorías de ayuda</h2>
+      <p>
+        Selecciona una categoría para consultar instrucciones y temas
+        relacionados.
+      </p>
+    </div>
+
+    <div class="support-category-layout">
+      <div class="category-navigation" aria-label="Categorías de soporte">
+        <button
+          class="category-button active"
+          type="button"
+          data-category="primeros-pasos"
+        >
+          <span class="category-button-icon">↗</span>
+
+          <span>
+            <strong>Primeros pasos</strong>
+            <small>Acceso y navegación</small>
+          </span>
+
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button
+          class="category-button"
+          type="button"
+          data-category="inventario"
+        >
+          <span class="category-button-icon">▣</span>
+
+          <span>
+            <strong>Inventario</strong>
+            <small>Equipos e información</small>
+          </span>
+
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button
+          class="category-button"
+          type="button"
+          data-category="mantenimientos"
+        >
+          <span class="category-button-icon">◴</span>
+
+          <span>
+            <strong>Mantenimientos</strong>
+            <small>Servicios e historial</small>
+          </span>
+
+          <span class="category-arrow">→</span>
+        </button>
+
+        <button
+          class="category-button"
+          type="button"
+          data-category="reportes"
+        >
+          <span class="category-button-icon">▤</span>
+
+          <span>
+            <strong>Reportes y documentos</strong>
+            <small>PDF e indicadores</small>
+          </span>
+
+          <span class="category-arrow">→</span>
+        </button>
+      </div>
+
+      <div class="category-detail">
+        <article
+          class="category-panel active"
+          data-category-panel="primeros-pasos"
+        >
+          <span class="category-panel-label">Primeros pasos</span>
+          <h3>Comienza a utilizar IOVI</h3>
+
+          <p>
+            Consulta los procesos básicos para acceder a la plataforma,
+            configurar tu cuenta y familiarizarte con sus principales
+            secciones.
+          </p>
+
+          <div class="category-topics">
+            <details>
+              <summary>Inicio de sesión <span>+</span></summary>
+              <p>
+                Ingresa a IOVI utilizando el correo electrónico y la contraseña
+                asociados a tu cuenta. Verifica que tus datos estén escritos
+                correctamente antes de intentar acceder nuevamente.
+              </p>
+            </details>
+
+            <details>
+              <summary>Configuración de cuenta <span>+</span></summary>
+              <p>
+                Desde la sección de usuario puedes consultar la información
+                asociada a tu cuenta y actualizar los datos disponibles, como
+                tu nombre o identificador visible.
+              </p>
+            </details>
+
+            <details>
+              <summary>Navegación básica <span>+</span></summary>
+              <p>
+                Utiliza el menú principal para acceder al inicio, inventario,
+                mantenimientos, historial y demás módulos habilitados para tu
+                cuenta.
+              </p>
+            </details>
+
+            <details>
+              <summary>Recuperación de contraseña <span>+</span></summary>
+              <p>
+                Selecciona la opción de recuperación disponible en la pantalla
+                de inicio de sesión. Recibirás un correo con las instrucciones
+                necesarias para establecer una nueva contraseña.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article
+          class="category-panel"
+          data-category-panel="inventario"
+          hidden
+        >
+          <span class="category-panel-label">Inventario</span>
+          <h3>Administra la información de tus equipos</h3>
+
+          <p>
+            Registra, localiza y consulta los datos técnicos y administrativos
+            de cada equipo desde un solo lugar.
+          </p>
+
+          <div class="category-topics">
+            <details>
+              <summary>Registrar un equipo <span>+</span></summary>
+              <p>
+                Accede al módulo de inventario, selecciona la opción para
+                agregar un equipo y completa los campos solicitados. Procura
+                registrar correctamente la marca, modelo, número de serie,
+                ubicación y estado del equipo.
+              </p>
+            </details>
+
+            <details>
+              <summary>Editar información <span>+</span></summary>
+              <p>
+                Abre el detalle del equipo y selecciona la opción de edición.
+                Modifica únicamente la información necesaria y guarda los
+                cambios para actualizar el registro.
+              </p>
+            </details>
+
+            <details>
+              <summary>Buscar y filtrar equipos <span>+</span></summary>
+              <p>
+                Utiliza la barra de búsqueda y los filtros disponibles para
+                localizar equipos por nombre, marca, modelo, número de serie,
+                servicio, prioridad o estado.
+              </p>
+            </details>
+
+            <details>
+              <summary>Dar de baja un equipo <span>+</span></summary>
+              <p>
+                Desde el detalle del equipo, selecciona la opción de baja y
+                registra el motivo, la fecha y la información solicitada. El
+                equipo dejará de aparecer en el inventario activo.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article
+          class="category-panel"
+          data-category-panel="mantenimientos"
+          hidden
+        >
+          <span class="category-panel-label">Mantenimientos</span>
+          <h3>Registra y consulta las intervenciones</h3>
+
+          <p>
+            Mantén actualizado el historial técnico de cada equipo y consulta
+            sus fechas de mantenimiento.
+          </p>
+
+          <div class="category-topics">
+            <details>
+              <summary>Registrar un mantenimiento <span>+</span></summary>
+              <p>
+                Selecciona el equipo correspondiente, indica el tipo de
+                mantenimiento, registra la fecha, agrega los comentarios
+                técnicos y adjunta la evidencia disponible.
+              </p>
+            </details>
+
+            <details>
+              <summary>Consultar el historial <span>+</span></summary>
+              <p>
+                Ingresa al detalle del equipo para consultar cronológicamente
+                las intervenciones registradas, incluyendo fechas, tipo de
+                servicio, comentarios y evidencias.
+              </p>
+            </details>
+
+            <details>
+              <summary>Revisar equipos próximos o vencidos <span>+</span></summary>
+              <p>
+                Desde el panel principal puedes identificar los equipos con
+                mantenimiento vencido, próximo o vigente, de acuerdo con su
+                última intervención y frecuencia asignada.
+              </p>
+            </details>
+
+            <details>
+              <summary>Adjuntar evidencias <span>+</span></summary>
+              <p>
+                Durante el registro de un mantenimiento puedes agregar archivos
+                o fotografías relacionadas con la intervención para conservar
+                un respaldo documental.
+              </p>
+            </details>
+          </div>
+        </article>
+
+        <article
+          class="category-panel"
+          data-category-panel="reportes"
+          hidden
+        >
+          <span class="category-panel-label">Reportes y documentos</span>
+          <h3>Consulta y descarga información</h3>
+
+          <p>
+            Genera documentos y revisa indicadores para facilitar el
+            seguimiento y la toma de decisiones.
+          </p>
+
+          <div class="category-topics">
+            <details>
+              <summary>Descargar reportes PDF <span>+</span></summary>
+              <p>
+                Utiliza la opción de generación de reportes para descargar un
+                documento PDF con la información disponible del inventario o
+                del equipo seleccionado.
+              </p>
+            </details>
+
+            <details>
+              <summary>Consultar información técnica <span>+</span></summary>
+              <p>
+                Abre el registro del equipo para revisar sus datos generales,
+                características técnicas, ubicación, prioridad y estado actual.
+              </p>
+            </details>
+
+            <details>
+              <summary>Revisar el historial por equipo <span>+</span></summary>
+              <p>
+                Cada equipo dispone de un historial individual que reúne los
+                mantenimientos y cambios registrados durante su permanencia en
+                la plataforma.
+              </p>
+            </details>
+
+            <details>
+              <summary>Visualizar indicadores <span>+</span></summary>
+              <p>
+                El panel principal presenta indicadores relacionados con el
+                estado de los mantenimientos para ayudarte a identificar
+                pendientes y priorizar actividades.
+              </p>
+            </details>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+      <!-- PREGUNTAS FRECUENTES -->
+      <section class="support-faq" id="preguntas-frecuentes">
+        <div class="container faq-grid">
+          <div class="faq-introduction">
+            <span class="section-label">Preguntas frecuentes</span>
+
+            <h2>Respuestas rápidas para las dudas más comunes</h2>
+
+            <p>
+              Selecciona una pregunta para consultar la respuesta.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>
+                ¿Cómo registro un equipo?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Ingresa a la sección de inventario, selecciona la opción para
+                  agregar un equipo y completa los datos solicitados, como
+                  nombre, marca, modelo, número de serie, ubicación y estado.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿Cómo se calcula el próximo mantenimiento?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  IOVI utiliza la fecha del último mantenimiento y la frecuencia
+                  asignada al equipo para calcular automáticamente su próxima
+                  fecha de servicio.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿Puedo descargar mi inventario?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Sí. La plataforma permite generar documentos PDF con la
+                  información principal de los equipos registrados.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿Cómo consulto el historial de un equipo?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Busca el equipo dentro del inventario y abre su detalle. Ahí
+                  podrás consultar los mantenimientos registrados y la
+                  información histórica disponible.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿Qué hago si olvidé mi contraseña?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Utiliza la opción de recuperación de contraseña disponible en
+                  la pantalla de inicio de sesión y sigue las instrucciones que
+                  recibirás por correo electrónico.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿IOVI funciona desde celular?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Sí. IOVI está diseñado para adaptarse a computadoras,
+                  tabletas y dispositivos móviles compatibles con un navegador
+                  moderno.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                ¿Cómo solicito ayuda técnica?
+                <span>+</span>
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Puedes comunicarte con nuestro equipo desde la página de
+                  contacto o escribir a contacto@iovicmms.com, indicando el
+                  problema y los detalles necesarios para poder ayudarte.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ESTADO DEL SISTEMA -->
+      <section class="system-status">
+        <div class="container">
+          <div class="status-card">
+            <div class="status-copy">
+              <span class="section-label">Estado del sistema</span>
+
+              <h2>Todos los servicios están operando</h2>
+
+              <p>
+                La plataforma se encuentra disponible y funcionando con
+                normalidad.
+              </p>
+            </div>
+
+            <div class="status-indicator">
+              <span class="status-dot"></span>
+              Operativo
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTAR SOPORTE -->
+      <section class="support-contact">
+        <div class="container support-contact-grid">
+          <div>
+            <span class="section-label">Atención personalizada</span>
+
+            <h2>¿No encontraste la respuesta?</h2>
+
+            <p>
+              Envíanos un mensaje con los detalles de tu consulta y nuestro
+              equipo revisará tu solicitud.
+            </p>
+
+            <div class="support-schedule">
+              <strong>Horario de atención</strong>
+              <span>
+                Lunes a viernes, de 9:00 a.m. a 6:00 p.m., horario de Hermosillo.
+              </span>
+            </div>
+          </div>
+
+          <div class="support-contact-card">
+            <span>Soporte IOVI</span>
+
+            <h3>Estamos para ayudarte</h3>
+
+            <p>
+              Para reportar un problema o solicitar asistencia, utiliza nuestro
+              formulario de contacto.
+            </p>
+
+            <a href="/contacto">Contactar soporte</a>
+
+            <small>
+              También puedes escribir a contacto@iovicmms.com
+            </small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <Footer />
+
+<script>
+  const botones = document.querySelectorAll(".category-button");
+  const paneles = document.querySelectorAll(".category-panel");
+  const buscador = document.querySelector("#support-search");
+
+  botones.forEach((boton) => {
+    boton.addEventListener("click", () => {
+      const categoria = boton.getAttribute("data-category");
+
+      botones.forEach((otroBoton) => {
+        otroBoton.classList.remove("active");
+      });
+
+      paneles.forEach((panel) => {
+        panel.classList.remove("active");
+        panel.setAttribute("hidden", "");
+      });
+
+      boton.classList.add("active");
+
+      const panelSeleccionado = document.querySelector(
+        `[data-category-panel="${categoria}"]`
+      );
+
+      if (panelSeleccionado) {
+        panelSeleccionado.classList.add("active");
+        panelSeleccionado.removeAttribute("hidden");
+      }
+    });
+  });
+
+  buscador?.addEventListener("input", (evento) => {
+    const entrada = evento.target;
+
+    if (!(entrada instanceof HTMLInputElement)) {
+      return;
+    }
+
+    const termino = entrada.value.toLowerCase().trim();
+
+    botones.forEach((boton) => {
+      const categoria = boton.getAttribute("data-category");
+
+      const panel = document.querySelector(
+        `[data-category-panel="${categoria}"]`
+      );
+
+      const contenido = `${boton.textContent} ${panel?.textContent}`
+        .toLowerCase();
+
+      boton.style.display =
+        contenido.includes(termino) || termino === "" ? "" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<style>
+  .support-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 115px 0 105px;
+    background:
+      linear-gradient(rgb(37 99 235 / 4%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(37 99 235 / 4%) 1px, transparent 1px),
+      radial-gradient(
+        circle at 85% 15%,
+        rgb(6 182 212 / 16%),
+        transparent 30%
+      ),
+      #f8fbff;
+    background-size:
+      54px 54px,
+      54px 54px,
+      auto,
+      auto;
+  }
+
+  .support-hero-content {
+    max-width: 900px;
+    text-align: center;
+  }
+
+  .support-eyebrow,
+  .section-label {
+    color: var(--primary);
+    font-size: 0.78rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .support-hero h1 {
+    margin: 20px auto;
+    color: var(--navy);
+    font-size: clamp(3rem, 7vw, 6rem);
+    line-height: 0.98;
+    letter-spacing: -0.06em;
+  }
+
+  .support-hero p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 1.06rem;
+    line-height: 1.8;
+  }
+
+  .support-search {
+    width: min(100%, 670px);
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 38px auto 0;
+    padding: 0 20px;
+    border: 1px solid rgb(148 163 184 / 22%);
+    border-radius: 17px;
+    background: white;
+    box-shadow: 0 22px 55px rgb(15 23 42 / 10%);
+  }
+
+  .support-search > span {
+    color: var(--primary);
+    font-size: 1.35rem;
+  }
+
+  .support-search input {
+    width: 100%;
+    border: 0;
+    outline: 0;
+    color: var(--text);
+    background: transparent;
+    font: inherit;
+    font-size: 0.95rem;
+  }
+
+  .support-categories,
+  .support-faq,
+  .system-status,
+  .support-contact {
+    padding: 105px 0;
+  }
+
+  .support-categories {
+    background: white;
+  }
+
+  .support-heading {
+    max-width: 750px;
+    margin: 0 auto 55px;
+    text-align: center;
+  }
+
+  .support-heading h2,
+  .faq-introduction h2,
+  .status-copy h2,
+  .support-contact h2 {
+    margin: 18px 0;
+    color: var(--navy);
+    font-size: clamp(2.2rem, 4vw, 3.7rem);
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+  }
+
+  .support-heading p,
+  .faq-introduction p,
+  .status-copy p,
+  .support-contact p {
+    margin: 0;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+
+  .categories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+
+  .category-card {
+    min-height: 330px;
+    padding: 28px;
+    border: 1px solid rgb(148 163 184 / 17%);
+    border-radius: 23px;
+    background: #fff;
+    box-shadow: 0 18px 45px rgb(15 23 42 / 6%);
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .category-card:hover {
+    transform: translateY(-7px);
+    border-color: rgb(37 99 235 / 24%);
+    box-shadow: 0 27px 60px rgb(37 99 235 / 12%);
+  }
+
+  .category-icon {
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    margin-bottom: 26px;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--secondary)
+    );
+    box-shadow: 0 14px 30px rgb(37 99 235 / 22%);
+    font-size: 1.2rem;
+    font-weight: 900;
+  }
+
+  .category-card h3 {
+    margin: 0 0 20px;
+    color: var(--navy);
+    font-size: 1.18rem;
+  }
+
+  .category-card ul {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .category-card li {
+    position: relative;
+    padding-left: 19px;
+    color: var(--muted);
+    font-size: 0.84rem;
+    line-height: 1.5;
+  }
+
+  .category-card li::before {
+    content: "";
+    position: absolute;
+    top: 0.58em;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--primary);
+  }
+
+  .support-faq {
+    background: #f1f5ff;
+  }
+
+  .faq-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    align-items: start;
+    gap: 80px;
+  }
+
+  .faq-introduction {
+    position: sticky;
+    top: 120px;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 14px;
+  }
+
+  .faq-item {
+    overflow: hidden;
+    border: 1px solid rgb(148 163 184 / 18%);
+    border-radius: 17px;
+    background: white;
+    box-shadow: 0 12px 32px rgb(15 23 42 / 5%);
+  }
+
+  .faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 24px;
+    color: var(--navy);
+    font-size: 0.95rem;
+    font-weight: 800;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .faq-item summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-item summary span {
+    width: 29px;
+    height: 29px;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    color: var(--primary);
+    background: var(--background-blue);
+    font-size: 1.15rem;
+    transition: transform 0.25s ease;
+  }
+
+  .faq-item[open] summary span {
+    transform: rotate(45deg);
+  }
+
+  .faq-answer {
+    padding: 0 24px 22px;
+  }
+
+  .faq-answer p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+  .system-status {
+    background: white;
+  }
+
+  .status-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 45px;
+    padding: 48px;
+    border: 1px solid rgb(34 197 94 / 20%);
+    border-radius: 28px;
+    background:
+      radial-gradient(
+        circle at 90% 20%,
+        rgb(34 197 94 / 10%),
+        transparent 30%
+      ),
+      #f7fff9;
+    box-shadow: 0 22px 55px rgb(15 23 42 / 7%);
+  }
+
+  .status-copy h2 {
+    margin-bottom: 12px;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+  }
+
+  .status-indicator {
+    min-width: max-content;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 17px;
+    border: 1px solid rgb(34 197 94 / 24%);
+    border-radius: 999px;
+    color: #15803d;
+    background: white;
+    font-size: 0.82rem;
+    font-weight: 800;
+  }
+
+  .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #22c55e;
+    box-shadow: 0 0 0 6px rgb(34 197 94 / 13%);
+  }
+
+  .support-contact {
+    background: #f8fafc;
+  }
+
+  .support-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.85fr;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .support-schedule {
+    display: grid;
+    gap: 7px;
+    margin-top: 30px;
+    padding-left: 18px;
+    border-left: 3px solid var(--primary);
+  }
+
+  .support-schedule strong {
+    color: var(--navy);
+  }
+
+  .support-schedule span {
+    color: var(--muted);
+    font-size: 0.86rem;
+    line-height: 1.6;
+  }
+
+  .support-contact-card {
+    padding: 38px;
+    border: 1px solid rgb(37 99 235 / 15%);
+    border-radius: 26px;
+    background: white;
+    box-shadow: 0 25px 65px rgb(15 23 42 / 10%);
+  }
+
+  .support-contact-card > span {
+    color: var(--primary);
+    font-size: 0.74rem;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .support-contact-card h3 {
+    margin: 15px 0 12px;
+    color: var(--navy);
+    font-size: 1.55rem;
+  }
+
+  .support-contact-card p {
+    margin-bottom: 25px;
+    font-size: 0.88rem;
+  }
+
+  .support-contact-card a {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 23px;
+    border-radius: 11px;
+    color: white;
+    background: var(--primary);
+    font-size: 0.87rem;
+    font-weight: 800;
+    box-shadow: 0 14px 32px rgb(37 99 235 / 24%);
+    transition:
+      transform 0.2s ease,
+      background 0.2s ease;
+  }
+
+  .support-contact-card a:hover {
+    transform: translateY(-2px);
+    background: #1d4ed8;
+  }
+
+  .support-contact-card small {
+    display: block;
+    margin-top: 18px;
+    color: var(--muted);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 1000px) {
+    .categories-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 850px) {
+    .faq-grid,
+    .support-contact-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+
+    .faq-introduction {
+      position: static;
+      text-align: center;
+    }
+
+    .status-card {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+
+  @media (max-width: 620px) {
+    .support-hero {
+      padding: 85px 0;
+    }
+
+    .support-hero h1 {
+      font-size: clamp(2.8rem, 14vw, 4.5rem);
+    }
+
+    .support-categories,
+    .support-faq,
+    .system-status,
+    .support-contact {
+      padding: 80px 0;
+    }
+
+    .categories-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .category-card {
+      min-height: auto;
+    }
+
+    .status-card {
+      padding: 30px 24px;
+    }
+
+    .support-contact-card {
+      padding: 28px 24px;
+    }
+  }
+  .support-category-layout {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  align-items: start;
+  gap: 28px;
+}
+
+.category-navigation {
+  display: grid;
+  gap: 12px;
+}
+
+.category-button {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: var(--text);
+  background: white;
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.category-button:hover,
+.category-button.active {
+  transform: translateX(5px);
+  border-color: rgb(37 99 235 / 30%);
+  background: #f4f7ff;
+  box-shadow: 0 14px 34px rgb(37 99 235 / 10%);
+}
+
+.category-button-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  color: white;
+  background: linear-gradient(
+    135deg,
+    var(--primary),
+    var(--secondary)
+  );
+  font-weight: 900;
+}
+
+.category-button strong,
+.category-button small {
+  display: block;
+}
+
+.category-button strong {
+  color: var(--navy);
+  font-size: 0.92rem;
+}
+
+.category-button small {
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+
+.category-arrow {
+  color: var(--primary);
+  font-size: 1rem;
+  font-weight: 900;
+}
+
+.category-detail {
+  min-height: 520px;
+  padding: 38px;
+  border: 1px solid rgb(148 163 184 / 18%);
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 25px 65px rgb(15 23 42 / 8%);
+}
+
+.category-panel-label {
+  color: var(--primary);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.category-panel h3 {
+  margin: 13px 0;
+  color: var(--navy);
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+}
+
+.category-panel > p {
+  margin: 0 0 30px;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.category-topics {
+  display: grid;
+  gap: 12px;
+}
+
+.category-topics details {
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: #f8fafc;
+}
+
+.category-topics summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 18px;
+  color: var(--navy);
+  font-size: 0.88rem;
+  font-weight: 800;
+  cursor: pointer;
+  list-style: none;
+}
+
+.category-topics summary::-webkit-details-marker {
+  display: none;
+}
+
+.category-topics summary span {
+  color: var(--primary);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.category-topics details[open] summary span {
+  transform: rotate(45deg);
+}
+
+.category-topics details p {
+  margin: 0;
+  padding: 0 18px 18px;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.75;
+}
+
+.support-empty-message {
+  margin: 22px auto 0;
+  padding: 14px 20px;
+  border: 1px solid rgb(239 68 68 / 15%);
+  border-radius: 12px;
+  color: #b91c1c;
+  background: rgb(254 242 242 / 90%);
+  font-size: 0.84rem;
+}
+
+@media (max-width: 850px) {
+  .support-category-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .category-detail {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .category-button {
+    grid-template-columns: 44px 1fr auto;
+    padding: 14px;
+  }
+
+  .category-button-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .category-detail {
+    padding: 24px;
+  }
+}
+</style>
